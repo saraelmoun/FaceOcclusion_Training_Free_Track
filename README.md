@@ -64,7 +64,7 @@ L'erreur est une **MSE pondérée** qui pénalise davantage les fortes occlusion
 
 <div align="center">
 
-  <img src="images/Approche.png" alt="Architecture Training-Free : extraction de featuresfigées puis prédiction par in-context learning" width="800"/>
+  <img src="images/approche2.png" alt="Architecture Training-Free : extraction de featuresfigées puis prédiction par in-context learning" width="800"/>
 
   <sub><i>Pipeline en deux temps : 4 modèles pré-entraînés figés décrivent le visage,
   puis TabICL prédit le score par in-context learning à partir d'exemples étiquetés.</i></sub>
@@ -123,8 +123,6 @@ export CROPS_DIR=/chemin/vers/les/images      # crops 224×224 du challenge
 python src/extract.py                         # → features/*.npy
 python src/p6_tabicl_icl.py
 ```
-
-## Limites
 
 
 ---
