@@ -1,0 +1,4 @@
+features/*.npy
+features/*.ckpt
+__pycache__/
+*.pyc
