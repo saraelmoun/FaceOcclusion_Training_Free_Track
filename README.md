@@ -85,7 +85,7 @@ L'erreur est une **MSE pondérée** qui pénalise davantage les fortes occlusion
 
 ---
 
-## 🏆 Résultats
+## 🏆 Résultats ok
 
 <div align="center">
 
