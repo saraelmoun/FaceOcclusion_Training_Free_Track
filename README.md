@@ -85,14 +85,15 @@ L'erreur est une **MSE pondérée** qui pénalise davantage les fortes occlusion
 
 ---
 
-## 🏆 Résultats ok
+## 🏆 Résultats 
 
 <div align="center">
 
 <img src="images/leaderboard.png" alt="Classement du data challenge" width="600"/>
+</br>
+<sub><i>Classement interim — Data Challenge IDEMIA × Télécom Paris.</i></sub>
 
 </div>
-<sub><i>Classement interim — Data Challenge IDEMIA × Télécom Paris.</i></sub>
 
 ---
 
