@@ -77,6 +77,42 @@ L'erreur est une **MSE pondérée** qui pénalise davantage les fortes occlusion
 
 ## Reproduire les résultats
 
+### Installation
+
+```bash
+git clone https://github.com/saraelmoun/FaceOcclusion_Training_Free_Track.git
+cd FaceOcclusion_Training_Free_Track
+pip install -r requirements.txt
+```
+
+L'approche n'entraîne aucun modèle, la prédiction se fait par *in-context
+learning* avec TabICL figé. La voie A suffit pour reproduire la soumission.
+
+--- 
+
+### Depuis les features figées 
+
+Télécharge les features pré-calculées (8 fichiers `.npy`, 4 modèles × train/test)
+et le checkpoint TabICL depuis Hugging Face, puis génère la prédiction.
+
+```bash
+bash features/download_features.sh
+python src/p6_tabicl_icl.py
+```
+
+→ produit `predictions/test_predictions_tabicl.csv` (29 980 prédictions).
+Tout est déterministe (graines fixes) : le fichier obtenu est identique à celui
+versionné dans `predictions/`.
+
+### Refaire les features depuis les images (GPU)
+
+
+```bash
+bash external/download_extractor_weights.sh   # poids des extracteurs (CLIB-FIQA, Faceptor...)
+export CROPS_DIR=/chemin/vers/les/images      # crops 224×224 du challenge
+python src/extract.py                         # → features/*.npy
+python src/p6_tabicl_icl.py
+```
 
 ---
 
