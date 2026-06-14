@@ -64,12 +64,13 @@ L'erreur est une **MSE pondérée** qui pénalise davantage les fortes occlusion
 
 <div align="center">
 
-  <img src="images/architecture.png" alt="Architecture Training-Free : extraction de features 
+  <img src="images/approche.png" alt="Architecture Training-Free : extraction de features 
   figées puis prédiction par in-context learning" width="800"/>
 
   <sub><i>Pipeline en deux temps : 4 modèles pré-entraînés figés décrivent le visage,
   puis TabICL prédit le score par in-context learning à partir d'exemples étiquetés.</i></sub>
 
+</div>
 
 --- 
 
