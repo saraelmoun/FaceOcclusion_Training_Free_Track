@@ -90,22 +90,23 @@ learning* avec TabICL figé. La voie A suffit pour reproduire la soumission.
 
 --- 
 
-### Depuis les features figées 
+### Depuis les features figées
 
-Télécharge les features pré-calculées (8 fichiers `.npy`, 4 modèles × train/test)
-et le checkpoint TabICL depuis Hugging Face, puis génère la prédiction.
+Téléchargez les features pré-calculées (8 fichiers `.npy`, 4 modèles × train/test)
+et le checkpoint TabICL depuis Hugging Face
+([saraelmoun/facepredict-icl-features](https://huggingface.co/datasets/saraelmoun/facepredict-icl-features)),
+puis générez la prédiction.
 
 ```bash
 bash features/download_features.sh
 python src/p6_tabicl_icl.py
 ```
 
-→ produit `predictions/test_predictions_tabicl.csv` (29 980 prédictions).
-Tout est déterministe (graines fixes) : le fichier obtenu est identique à celui
-versionné dans `predictions/`.
 
 ### Refaire les features depuis les images (GPU)
 
+Poids des extracteurs sur Hugging Face :
+[saraelmoun/facepredict-icl-extractor-weights](https://huggingface.co/saraelmoun/facepredict-icl-extractor-weights).
 
 ```bash
 bash external/download_extractor_weights.sh   # poids des extracteurs (CLIB-FIQA, Faceptor...)
@@ -113,8 +114,6 @@ export CROPS_DIR=/chemin/vers/les/images      # crops 224×224 du challenge
 python src/extract.py                         # → features/*.npy
 python src/p6_tabicl_icl.py
 ```
-
----
 
 ## Limites
 
